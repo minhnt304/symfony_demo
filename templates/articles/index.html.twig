@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %} Symfony {% endblock %}
+
+{% block body%}
+{% if articles %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Article Title</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in articles %}
+                <tr>
+                    <td>{{ article.title }}</td>
+                    <td><a href="/article/{{ article.id }}" class="button btn-dark">Show</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No article to show</p>
+{% endif %}
+{% endblock body%}

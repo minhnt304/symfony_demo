@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block title %} Symfony {% endblock %}
+
+{% block body%}
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.body }}</p>
+    <hr>
+    <a href="/index" class="button btn-light">Back</a>
+{% endblock body%}
